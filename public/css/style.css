@@ -84,8 +84,13 @@ main {
   position: relative;
 }
 
+.image {
+  display: flex;
+  justify-content: center;
+}
+
 .image img {
-  width: 100%;
+  width: 50%;
 }
 
 /* sök bar */
@@ -161,4 +166,17 @@ h1{
   margin-inline-start: 0px;
   margin-inline-end: 0px;
   font-weight: bold;
+}
+.input {
+  width: 100%;
+  height: 50px;
+  margin-bottom: 10px;
+}
+.cart form{
+  width: 100%;
+    height: 100%;
+    max-width: 468px;
+    max-height: 596px;
+    padding: 20px;
+    border-radius: 10px;
 }
