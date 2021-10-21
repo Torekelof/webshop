@@ -14,6 +14,13 @@ for (let i = 0; i < products.length; i++) {
           <span class="name">${products[i].name}</span>
           <span class="price">${products[i].price}kr + frakt</span>
         </div>
+        <select class="storlek" name="cars" id="cars">
+          <option value="">Select a size</option>
+          <option value="42">42</option>
+          <option value="43">43</option>
+          <option value="44">44</option>
+          <option value="45">45</option>
+        </select>
         <div class="add-to-cart--btn">
           <button>ADD TO CART</button>
         </div>

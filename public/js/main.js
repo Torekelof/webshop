@@ -10,9 +10,9 @@ window.addEventListener('click', function(event){
 var products = [
   {
     id: 7530489,
-    name: "Embroidered sport sweater",
+    name: "Jordan 4 taupe haze",
     price: 1899,
-    image: "stussy-embroidered.png"
+    image: "jordan-4.png"
   },
   {
     id: 9584957,

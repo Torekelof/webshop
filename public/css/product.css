@@ -32,6 +32,7 @@ nav {
   width: 100vw;
   height: 70px;
   border-bottom: 1px solid #dbdbdb;
+  background-color: #333;
 }
 
 .nav-wrapper {
@@ -40,11 +41,12 @@ nav {
   align-items: center;
   height: 100%;
   padding: 0 20px;
+
 }
 
 .title-container a {
   font-size: 30px;
-  color: #545454;
+  color: #fff;
   text-decoration: none;
   font-family: sans-serif;
 }
@@ -62,7 +64,7 @@ nav ul li {
 .nav-icon {
   pointer-events: none;
   width: 25px;
-  fill: #545454;
+  fill: #fff;
 }
 
 /* sök bar */
@@ -154,6 +156,7 @@ h1{
 
 .right {
   width: 50%;
+  padding: 20px;
 }
 
 .image-container img {
@@ -216,5 +219,19 @@ h1{
 .product {
   display: flex;
   align-items: center;
-  justify-content: space-between;
+  justify-content: space-around;
+}
+
+.storlek {
+    width: 100%;
+    max-width: 350px;
+    margin-bottom: 20px;
+    padding: 8px;
+    font-size: 14px;
+    border-radius: 5px;
+    outline: none;
+}
+
+.product-container {
+    margin-top: 50px;
 }
