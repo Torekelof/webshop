@@ -1,17 +1,8 @@
-window.addEventListener('click', function(event){
-  if (event.target.classList[0] == 'search-btn') {
-    document.querySelector('.search-box').style.display = 'flex'
-    this.document.querySelector('.search-bar').focus()
-  } else if (event.target.classList[0] != 'search-bar'){
-    document.querySelector('.search-box').style.display = 'none'
-  }
-})
-
 var products = [
   {
     id: 7530489,
     name: "Jordan 4 taupe haze",
-    price: 1899,
+    price: 3899,
     image: "jordan-4.png"
   },
   {
@@ -85,9 +76,61 @@ var products = [
     name: "Rick owens bag",
     price: 5999,
     image: "rick-owens.png"
+  },
+  {
+    id: 823424,
+    name: "Jordan 3 sport blue",
+    price: 3000,
+    image: "jordan-3-sport-blue.png"
+  },
+  {
+    id: 938431,
+    name: "Canada goose jacka",
+    price: 6999,
+    image: "canada-goose-jacka.png"
   }
 ]
 
+/* Search bar */
+window.addEventListener('click', function(event){
+  if (event.target.classList[0] == 'search-btn') {
+    document.querySelector('.search-box').style.display = 'flex'
+    this.document.querySelector('.search-bar').focus()
+  } else if (event.target.classList[0] != 'search-bar'){
+    document.querySelector('.search-box').style.display = 'none'
+  }
+})
+
+document.querySelector('.search-bar').addEventListener('keyup', (event) => {
+  var query = document.querySelector('.search-bar').value
+  document.querySelector('.search-suggestions').innerHTML = ''
+
+  if (query != '') {
+    // Sök förslag
+    for (let i = 0; i < products.length; i++) {
+      const product = products[i];
+      if (product.name.toLowerCase().includes(query.toLowerCase())) {
+        var a = document.createElement('a')
+        a.innerHTML = product.name
+        a.href = '/product.html?'+product.id
+
+        document.querySelector('.search-suggestions').appendChild(a)
+      }
+    }
+
+    // Om man trycker på enter
+    if (event.keyCode == 13) {
+      for (let i = 0; i < products.length; i++) {
+        const product = products[i];
+        if (product.name.toLowerCase().includes(query.toLowerCase())) {
+          window.location.href = `/product.html?${product.id}`
+        }
+      }
+    }
+  }
+})
+
+/* cart */
 function getCookie(name) {
   var nameEQ = name + "="
   var ca = document.cookie.split(';')
@@ -98,8 +141,6 @@ function getCookie(name) {
   }
   return null;
 }
-
-
 
 function getCartLength(){
   var cookies = JSON.parse(getCookie("cart"))
