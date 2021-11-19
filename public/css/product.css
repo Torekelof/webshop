@@ -44,6 +44,7 @@
   font-size: 14px;
   border-radius: 5px;
   outline: none;
+  cursor: pointer;
 }
 
 .add-to-cart--btn button {

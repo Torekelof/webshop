@@ -1,31 +1,38 @@
+.wrapper {
+  flex-direction: column;
+}
+
 .product-container {
   height: 100%;
   display: flex;
 }
 
 .product {
+  width: 50%;
   position: relative;
-  display: flex;
   height: 100%;
-  align-items: center;
+  padding: 50px;
+}
+
+body {
+  overflow-y: hidden;
 }
 
 .image {
-  display: flex;
-  justify-content: center;
+  text-align: center;
+  max-height: 70%;
   padding: 10px;
-  border-radius: 30px;
-  width: 50%;
-
 }
 
 .image img {
-  width: 100%;
+  height: 100%;
 }
 
 .name {
   font-size: 35px;
+  font-family: sans-serif;
   font-weight: bold;
+  color: #545454;
 }
 
 .text {
@@ -33,7 +40,7 @@
   display: flex;
   flex-direction: column;
   justify-content: center;
-  align-items: flex-start;
+  align-items: center;
   padding: 20px;
 }
 
@@ -53,4 +60,136 @@
   cursor: pointer;
   text-decoration: none;
   font-family: sans-serif;
+}
+
+.buy-btn.yellow {
+  background-color: #eec037;
+}
+
+.start-page {
+  height: 75%;
+  width: 50%;
+  padding: 50px;
+}
+
+.buy-button {
+  padding: 15px 161px;
+  background-color: #ffd700;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  margin-top: 15px;
+  cursor: pointer;
+  text-decoration: none;
+  font-family: sans-serif;
+}
+
+img.product {
+  position: relative;
+  display: block;
+  height: 100%;
+  align-items: center;
+  padding: 50px;
+}
+
+img {
+  width: 50%;
+}
+
+
+.slideshow-container {
+  position: relative;
+  margin: auto;
+  width: 75%;
+  text-align: center;
+}
+
+.mySlides {
+  display: none;
+}
+
+.prev,
+.next {
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  width: auto;
+  padding: 16px;
+  color: black;
+  font-weight: bold;
+  font-size: 18px;
+  transition: 0.6s ease;
+  border-radius: 0 3px 3px 0;
+}
+
+.prev {
+  left: 20px;
+}
+
+.next {
+  right: 20px;
+}
+
+.prev:hover,
+.next:hover {
+  background-color: rgba(0, 0, 0, 0.8);
+}
+
+.text {
+  color: #f2f2f2;
+  font-size: 15px;
+  padding: 8px 12px;
+  width: 100%;
+}
+
+.numbertext {
+  color: #f2f2f2;
+  font-size: 12px;
+  padding: 8px 12px;
+  position: absolute;
+  top: 0;
+}
+
+.dot {
+  cursor: pointer;
+  height: 15px;
+  width: 15px;
+  margin: 0 2px;
+  background-color: #bbb;
+  border-radius: 50%;
+  display: inline-block;
+  transition: background-color 0.6s ease;
+}
+
+.active,
+.dot:hover {
+  background-color: #717171;
+}
+
+.fade {
+  -webkit-animation-name: fade;
+  -webkit-animation-duration: 1.5s;
+  animation-name: fade;
+  animation-duration: 1.5s;
+}
+
+@-webkit-keyframes fade {
+  from {
+    opacity: .4
+  }
+
+  to {
+    opacity: 1
+  }
+}
+
+@keyframes fade {
+  from {
+    opacity: .4
+  }
+
+  to {
+    opacity: 1
+  }
 }

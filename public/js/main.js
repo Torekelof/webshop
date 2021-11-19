@@ -88,6 +88,25 @@ var products = [
     name: "Canada goose jacka",
     price: 6999,
     image: "canada-goose-jacka.png"
+  },
+  {
+    id: 934214,
+    name: "stussy T gul",
+    price: 899,
+    image: "stussy-t-gul.png",
+    theme: "yellow"
+  },
+  {
+    id: 893284,
+    name:"Jordan 3 Pine Green",
+    price: 2500,
+    Image: "jordan-3-pine.png"
+  },
+  {
+    id: 728424,
+    name: "stussy Embroidered",
+    price: 599,
+    image: "stussy-embroidered.png"
   }
 ]
 
